@@ -1,10 +1,3 @@
-# Multisig Signing Tool with Airgapped Signing Workflow (2-of-3 Example)
-
-# Device 1: Online device (Coordinator)
-# - Responsible for PSBT creation and broadcasting
-# Device 2 & 3: Offline devices (Signers)
-# - Responsible for signing PSBTs offline
-
 # ========== ONLINE DEVICE CODE ==========
 
 from bitcoinlib.wallets import Wallet
@@ -118,3 +111,4 @@ if psbt1.is_fully_signed():
         print("Broadcast failed:", broadcast_response.text)
 else:
     print("Not enough signatures yet.")
+
