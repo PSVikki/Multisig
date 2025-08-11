@@ -35,27 +35,27 @@ NETWORK = 'testnet'
 # This data MUST be accurate.
 utxos_to_spend = [
     {
-        "txid": "b1a1a5b82143003020689b0d105a1e7b1652136e0d37e6f8595a8e0f6c2c62c9",
+        "txid": "dd23e8df8f2875c832bfbfdfca5b9faeb0b7b95d7446fc06eead8da8a9af17e9",
         "vout": 0,
-        "amount": 0.05,
-        "scriptPubKey": "76a914c622a55986872a3e0f6c9d06637e1713e5e4933988ac"
+        "amount": 45.42,
+        "scriptPubKey": "1H4tD16pMy544aA8QE3b19wzEmzwJn3wtf"
     },
     {
-        "txid": "a9a23c31821464455f7560447335d886a11782e4e1a0d33e5c709e3a3e61884b",
+        "txid": "3c185ef04212b43cf3eeaa7ae18e5df0a0948dd662ff5d96ddba413bf70de11a",
         "vout": 1,
-        "amount": 0.1,
-        "scriptPubKey": "76a914c622a55986872a3e0f6c9d06637e1713e5e4933988ac"
+        "amount":68.93732413,
+        "scriptPubKey": "191oTkxrkmHFs3XGdUAzwkpKA1JKUVggFp"
     }
 ]
 
 # The address of the recipient
-recipient_address = "tb1qj5lqj4p3j7f5y5w2w4f8h0l0t9p2q0t7e7s7q5"
+recipient_address = "1H4tD16pMy544aA8QE3b19wzEmzwJn3wtf"
 
 # The amount to send (in BTC)
 amount_to_send = 0.05
 
 # Your change address (where remaining funds will be sent)
-change_address = "tb1qj2m6d7u7a2e5x4f7g8h9l0p0t7s8d0e7x2z9t2c"
+change_address = "1H4tD16pMy544aA8QE3b19wzEmzwJn3wtf"
 
 # --- PSBT CREATION LOGIC ---
 
@@ -188,7 +188,7 @@ try:
     # Many block explorers have APIs for this.
     # We'll use a public API for this example.
     
-    api_url = "https://blockstream.info/testnet/api/tx"
+    api_url = "https://blockstream.info/tx/push"
     
     response = requests.post(api_url, data=raw_tx_hex)
     response.raise_for_status()
@@ -196,10 +196,11 @@ try:
 
     print("\nTransaction broadcast successfully!")
     print(f"Transaction ID (TXID): {tx_id}")
-    print(f"Check the transaction on a block explorer: https://blockstream.info/testnet/tx/{tx_id}")
+    print(f"Check the transaction on a block explorer: https://blockstream.info/tx/push}")
 
 except Exception as e:
     print(f"An error occurred while broadcasting: {e}")
     if 'response' in locals():
         print(f"API response: {response.text}")
+
 ```
