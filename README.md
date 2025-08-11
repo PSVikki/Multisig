@@ -34,7 +34,7 @@ A PSBT file contains all the necessary information for a transaction, including 
 
 1.  Clone the repository:
     ```bash
-    git clone https://github.com/your-username/psbt-tools.git
+    git clone https://github.com/PSVikki/Multisig.git
     cd psbt-tools
     ```
 2.  Install the required dependencies:
@@ -54,8 +54,8 @@ from bitcoin_lib import P2PKHOutput, UTXO
 utxo = UTXO(txid="abcdef123456...", vout=0, script_pubkey="...")
 
 # Create the output
-recipient_address = "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa"
-amount_btc = 0.01
+recipient_address = "1H4tD16pMy544aA8QE3b19wzEmzwJn3wtf"
+amount_btc = 68.93732413 BTC
 output = P2PKHOutput(amount_btc, recipient_address)
 
 # Create the PSBT
