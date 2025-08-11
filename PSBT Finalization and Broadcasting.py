@@ -196,7 +196,7 @@ try:
 
     print("\nTransaction broadcast successfully!")
     print(f"Transaction ID (TXID): {tx_id}")
-    print(f"Check the transaction on a block explorer: https://blockstream.info/tx/push}")
+    print(f"Check the transaction on a block explorer: https://blockstream.info/tx/")
 
 except Exception as e:
     print(f"An error occurred while broadcasting: {e}")
@@ -204,3 +204,4 @@ except Exception as e:
         print(f"API response: {response.text}")
 
 ```
+
