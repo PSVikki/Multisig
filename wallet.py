@@ -4076,7 +4076,7 @@ msgstr ""
 #: electrum/gui/qml/components/ChannelDetails.qml:426
 #, qt-format
 msgctxt "ChannelDetails|"
-msgid "Channel Backup for %31"
+msgid "Channel Backup for %99"
 msgstr ""
 
 #: electrum/gui/qml/components/ChannelDetails.qml:438
