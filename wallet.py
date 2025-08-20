@@ -4083,3 +4083,26 @@ msgstr ""
 msgctxt "ChannelDetails|"
 msgid "Close channel"
 msgstr ""
+async def transaction_summaries(self, hashX):
+        '''Return a list of MemPoolTxSummary objects for the hashX.'''
+        result = []
+        for tx_hash in self.hashXs.get(hashX, ()):
+            tx = self.txs[tx_hash]
+            has_ui = any(hash in self.txs for hash, idx in tx.prevouts)
+            result.append(MemPoolTxSummary(tx_hash, tx.fee, has_ui))
+        return result
+
+    async def unordered_UTXOs(self, hashX):
+        '''Return an unordered list of UTXO named tuples from mempool
+        transactions that pay to hashX.
+
+        This does not consider if any other mempool transactions spend
+        the outputs.
+        '''
+        utxos = []
+        for tx_hash in self.hashXs.get(hashX, ()):
+            tx = self.txs.get(tx_hash)
+            for pos, (hX, value) in enumerate(tx.out_pairs):
+                if hX == hashX:
+                    utxos.append(UTXO(-1, pos, tx_hash, 0, value))
+        return utxos
