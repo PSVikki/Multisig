@@ -3992,3 +3992,33 @@ def restore_wallet_from_text(
            "Start a daemon and use load_wallet to sync its history.")
     wallet.save_db()
     return {'wallet': wallet, 'msg': msg}
+#: electrum/gui/qml/components/wizard/WCHaveSeed.qml:140
+msgctxt "WCHaveSeed|"
+msgid "Master public key"
+msgstr ""
+
+#: electrum/gui/qml/components/wizard/WCHaveSeed.qml:161
+#, qt-format
+msgctxt "WCHaveSeed|"
+msgid "Cosigner #%1 of %2"
+msgstr ""
+
+#: electrum/gui/qml/components/wizard/WCHaveSeed.qml:167
+msgctxt "WCHaveSeed|"
+msgid "Seed Type"
+msgstr ""
+
+#: electrum/gui/qml/components/wizard/WCHaveSeed.qml:177
+msgctxt "WCHaveSeed|"
+msgid "Electrum"
+msgstr ""
+
+#: electrum/gui/qml/components/wizard/WCHaveSeed.qml:178
+msgctxt "WCHaveSeed|"
+msgid "BIP39"
+msgstr ""
+
+#: electrum/gui/qml/components/wizard/WCHaveSeed.qml:199
+msgctxt "WCHaveSeed|"
+msgid "Enter cosigner seed"
+msgstr ""
