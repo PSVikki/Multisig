@@ -4112,3 +4112,20 @@ class NameIndexElectrumX(ElectrumX):
 
         if ptuple >= (1, 4, 3):
             self.request_handlers['blockchain.name.get_value_proof'] = self.name_get_value_proof
+# Log some stats
+        self.logger.info(f'UTXO DB version: {self.db_version:d}')
+        self.logger.info(f'coin: {self.coin.NAME}')
+        self.logger.info(f'network: {self.coin.NET}')
+        self.logger.info(f'height: {self.db_height:,d}')
+        self.logger.info(f'tip: {hash_to_hex_str(self.db_tip)}')
+        self.logger.info(f'tx count: {self.db_tx_count:,d}')
+        if self.utxo_db.for_sync:
+            self.logger.info(f'flushing DB cache at {self.env.cache_MB:,d} MB')
+        if self.first_sync:
+            self.logger.info(
+                f'sync time so far: {util.formatted_time(self.wall_time)}'
+            )
+
+    def upgrade_db(self):
+        self.logger.info(f'UTXO DB version: {self.db_version}')
+        self.logger.info('Upgrading your DB; this can take some time...')
