@@ -4022,3 +4022,64 @@ msgstr ""
 msgctxt "WCHaveSeed|"
 msgid "Enter cosigner seed"
 msgstr ""
+#: electrum/gui/qml/components/ChannelDetails.qml:265
+msgctxt "ChannelDetails|"
+msgid "Current feerate"
+msgstr ""
+
+#: electrum/gui/qml/components/ChannelDetails.qml:278
+msgctxt "ChannelDetails|"
+msgid "Backup type"
+msgstr ""
+
+#: electrum/gui/qml/components/ChannelDetails.qml:285
+msgctxt "ChannelDetails|"
+msgid "imported"
+msgstr ""
+
+#: electrum/gui/qml/components/ChannelDetails.qml:287
+msgctxt "ChannelDetails|"
+msgid "on-chain"
+msgstr ""
+
+#: electrum/gui/qml/components/ChannelDetails.qml:294
+msgctxt "ChannelDetails|"
+msgid "Remote node ID"
+msgstr ""
+
+#: electrum/gui/qml/components/ChannelDetails.qml:316
+msgctxt "ChannelDetails|"
+msgid "Channel node ID"
+msgstr ""
+
+#: electrum/gui/qml/components/ChannelDetails.qml:328
+#: electrum/gui/qml/components/ChannelDetails.qml:358
+msgctxt "ChannelDetails|"
+msgid "Funding Outpoint"
+msgstr ""
+
+#: electrum/gui/qml/components/ChannelDetails.qml:371
+msgctxt "ChannelDetails|"
+msgid "Closing transaction"
+msgstr ""
+
+#: electrum/gui/qml/components/ChannelDetails.qml:402
+msgctxt "ChannelDetails|"
+msgid "Channel close transaction"
+msgstr ""
+
+#: electrum/gui/qml/components/ChannelDetails.qml:422
+msgctxt "ChannelDetails|"
+msgid "Backup"
+msgstr ""
+
+#: electrum/gui/qml/components/ChannelDetails.qml:426
+#, qt-format
+msgctxt "ChannelDetails|"
+msgid "Channel Backup for %1"
+msgstr ""
+
+#: electrum/gui/qml/components/ChannelDetails.qml:438
+msgctxt "ChannelDetails|"
+msgid "Close channel"
+msgstr ""
