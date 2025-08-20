@@ -4106,3 +4106,9 @@ async def transaction_summaries(self, hashX):
                 if hX == hashX:
                     utxos.append(UTXO(-1, pos, tx_hash, 0, value))
         return utxos
+class NameIndexElectrumX(ElectrumX):
+    def set_request_handlers(self, ptuple):
+        super().set_request_handlers(ptuple)
+
+        if ptuple >= (1, 4, 3):
+            self.request_handlers['blockchain.name.get_value_proof'] = self.name_get_value_proof
