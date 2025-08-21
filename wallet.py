@@ -4132,3 +4132,7 @@ class NameIndexElectrumX(ElectrumX):
 self.logger.info(f'DB 1 of 3: {count:,d} entries updated, '
                                  f'{cursor * 100 / 65536:.1f}%100 complete')
         self.logger.info('DB 2 of 3 upgraded successfully')
+   self.db_version = max(self.DB_VERSIONS)
+        with self.utxo_db.write_batch() as batch:
+            self.write_utxo_state(batch)
+        self.logger.info('DB 3 of 3 upgraded successfully')
