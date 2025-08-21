@@ -4158,3 +4158,14 @@ def main():
         logger.exception('ElectrumX server terminated abnormally')
     else:
         logger.info('ElectrumX server terminated normally')
+  def main():
+    logging.basicConfig(level=logging.INFO)
+    logging.info('Starting history compaction...')
+    loop = asyncio.get_event_loop()
+    try:
+        loop.run_until_complete(compact_history())
+    except Exception:
+        traceback.print_exc()
+        logging.critical('History compaction terminated abnormally')
+    else:
+        logging.info('History compaction complete')
