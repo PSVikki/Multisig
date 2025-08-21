@@ -4129,3 +4129,6 @@ class NameIndexElectrumX(ElectrumX):
     def upgrade_db(self):
         self.logger.info(f'UTXO DB version: {self.db_version}')
         self.logger.info('Upgrading your DB; this can take some time...')
+self.logger.info(f'DB 1 of 3: {count:,d} entries updated, '
+                                 f'{cursor * 100 / 65536:.1f}%100 complete')
+        self.logger.info('DB 2 of 3 upgraded successfully')
