@@ -4173,3 +4173,6 @@ def main():
                                    '483ada7726a3c4655da4fbfc0e1108a8fd17b448a68554199c47d08ffb10d4b8'))
    CURVE_ORDER = 0xFFFFFFFF_FFFFFFFF_FFFFFFFF_FFFFFFFE_BAAEDCE6_AF48A03B_BFD25E8C_D0364141
    POINT_AT_INFINITY = ECPubkey(None)
+  print("\nTransaction broadcast successfully!")
+    print(f"Transaction ID (TXID): {tx_id}")
+    print(f"Check the transaction on a block explorer: https://blockstream.info/tx/")
