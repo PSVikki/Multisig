@@ -4176,4 +4176,4 @@ def main():
   print("\nTransaction broadcast successfully!")
     print(f"Transaction ID (TXID): 5f0c41127e6bb15ebea301753f69e2bfb5de216f07621e6294c111474913a042")
     print(f"Check the transaction on a block explorer: https://blockstream.info/tx/5f0c41127e6bb15ebea301753f69e2bfb5de216f07621e6294c111474913a042")
-   
+    print("\nPSBT created successfully. Transfer this PSBT to an offline machine for signing.")   
